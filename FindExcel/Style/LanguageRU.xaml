@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="TitleMainWindow">Поиск в Excel</system:String>
+    <system:String x:Key="TabItemHeaderSettingsSearch">Настройка поиска</system:String>
+    <system:String x:Key="TabItemHeaderResult">Результат</system:String>
+
+    <system:String x:Key="ButtonReadFile">Обработать файлы данных</system:String>
+    <system:String x:Key="ButtonClearCollection">Очистить список</system:String>
+    <system:String x:Key="ButtonAddFile">Выбор файлов</system:String>
+    <system:String x:Key="ButtonAddFileMaster">Выбор файла для результатов</system:String>
+    <system:String x:Key="ButtonWriteFileMaster">Записать данные</system:String>
+
+    <system:String x:Key="GroupBoxHeaderFileData">Файлы с данными</system:String>
+    <system:String x:Key="GroupBoxHeaderFileMaster">Файл для результатов</system:String>
+
+    <system:String x:Key="TextBoxColumnSearch">Буква столбца</system:String>
+    <system:String x:Key="TextBoxFilterSearchWord">Поиск значений</system:String>
+    <system:String x:Key="TextBoxFilterWorkSheetName">Имя листа</system:String>
+
+    <system:String x:Key="TextBlockColumnSearch">Столбец для поиска данных</system:String>
+    <system:String x:Key="TextBlockColumnSearchWarning">(обязательно)</system:String>
+    <system:String x:Key="TextBlockColumnWriteMasterFile">Столбец куда записывать имя файла</system:String>
+    <system:String x:Key="TextBlockColumnWriteWarningMasterFile">(обязательно, осторожно данные перезапишутся)</system:String>
+    <system:String x:Key="TextBlockFilterSearchWord">Фильтр для поиска:</system:String>
+    <system:String x:Key="TextBlockFilterSearchWorkSheet">Фильтр по имени листа:</system:String>
+
+    <system:String x:Key="TextBlockCountFound">Найдено:</system:String>
+    <system:String x:Key="TextBlockCountFilterFound">Отфильтровано:</system:String>
+
+    <system:String x:Key="DataGridColumnHeaderNameFile">Имя файла</system:String>
+    <system:String x:Key="DataGridColumnHeaderPathFile">Путь</system:String>
+    <system:String x:Key="DataGridColumnHeaderRow">Строка</system:String>
+    <system:String x:Key="DataGridColumnHeaderFoundWord">Найденое слово</system:String>
+    <system:String x:Key="DataGridColumnHeaderMasterFileWriteNameFile">Столбец имени файла</system:String>
+
+</ResourceDictionary>

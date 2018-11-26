@@ -1,0 +1,53 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:local="clr-namespace:FindExcel">
+
+    <Style x:Key="FlyoutsDefault" TargetType="{x:Type Controls:Flyout}">
+        <Setter Property="IsAutoCloseEnabled" Value="True" />
+        <Setter Property="IsPinned" Value="False" />
+        <Setter Property="Position" Value="Bottom" />
+        <Setter Property="Height" Value="Auto" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ProgressReport.ProcessType}" Value="{x:Static local:ProcessType.Error}">
+                <Setter Property="AutoCloseInterval" Value="10000" />
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Grid>
+
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="18"
+                                FontWeight="Black"
+                                Foreground="Red"
+                                Text="{Binding ProgressReport.ProcessedMessage}"
+                                TextWrapping="Wrap" />
+
+                        </Grid>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+
+            <DataTrigger Binding="{Binding ProgressReport.ProcessType}" Value="{x:Static local:ProcessType.Completed}">
+                <Setter Property="AutoCloseInterval" Value="5000" />
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Grid>
+
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                FontSize="16"
+                                Text="{Binding ProgressReport.ProcessedMessage}"
+                                TextWrapping="Wrap" />
+
+                        </Grid>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

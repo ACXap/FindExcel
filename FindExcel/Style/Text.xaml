@@ -1,0 +1,44 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
+
+    <Style x:Key="TextBlockResultLabel" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style
+        x:Key="TextBlockRedFont"
+        BasedOn="{StaticResource TextBlockResultLabel}"
+        TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style
+        x:Key="TextBlockLabelWarning"
+        BasedOn="{StaticResource TextBlockRedFont}"
+        TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="8" />
+    </Style>
+
+    <Style
+        x:Key="TextBoxDefault"
+        BasedOn="{StaticResource MetroTextBox}"
+        TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style
+        x:Key="TextBoxColumn"
+        BasedOn="{StaticResource TextBoxDefault}"
+        TargetType="{x:Type TextBox}">
+        <Setter Property="Controls:TextBoxHelper.Watermark" Value="{StaticResource TextBoxColumnSearch}" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+
+</ResourceDictionary>
